@@ -3,13 +3,13 @@
 // --
 // ATEM
 
-const IPAddress SWITCHER_IP(192, 168, 178, 123);
+const IPAddress SWITCHER_IP(192, 168, 1, 1);
 
 // --
 // WIFI
 
-#define SSID ""
-#define PASS ""
+#define SSID "WLAN_MIT"
+#define PASS "1009080706"
 
 // --
 // MISC
