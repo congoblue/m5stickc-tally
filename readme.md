@@ -1,6 +1,8 @@
-# M5StickC Tally for Blackmagic Switchers
+# M5StickCplus Tally for Blackmagic Switchers
 
-Turn an [M5StickC](https://m5stack.com/products/stick-c) into a Tally for Blackmagic Switchers. You can change the input and label with the buttons.
+Turn an [M5StickCplus](https://m5stack.com/products/stick-c) into a Tally for Blackmagic Switchers. You can change the input and label with the buttons.
+
+This code has been modified from the original for the StickCPlus which has bigger display.
 
 ## Setup 
 
