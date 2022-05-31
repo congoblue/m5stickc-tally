@@ -1,3 +1,6 @@
+#include <Arduino.h>
+#include <WiFi.h>
+#include <AsyncUDP.h>
 #include <M5StickC.h>
 #include <WiFi.h>
 #include <Preferences.h>
@@ -6,6 +9,7 @@
 #include <ATEMstd.h>
 
 #include "config.hpp"
+#include "m5stickc-tally.h"
 
 #define LED_PIN 10 // see https://github.com/m5stack/M5StickC#pinmap
 
