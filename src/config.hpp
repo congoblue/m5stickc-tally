@@ -3,7 +3,7 @@
 // --
 // ATEM
 
-const IPAddress SWITCHER_IP(192, 168, 1, 1);
+const IPAddress SWITCHER_IP(192, 168, 1, 150);
 
 // --
 // WIFI
