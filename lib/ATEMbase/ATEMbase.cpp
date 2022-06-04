@@ -48,7 +48,7 @@ void ATEMbase::begin(const IPAddress ip, const uint16_t localPort){
 	waitingForIncoming = false;
 
 		// Set up Udp communication object:
-	#ifdef ESP8266
+	#if ((defined ESP8266)||(defined ESP32))
 	WiFiUDP Udp;
 	#else
 	EthernetUDP Udp;
@@ -118,7 +118,7 @@ void ATEMbase::runLoop(uint16_t delayTime) {
 	if (neverConnected)	{
 		neverConnected = false;
 		connect();
-//		Serial.println("Connecting first time...");
+		Serial.println("Connecting first time...");
 	}
 
 	unsigned long enterTime = millis();
@@ -357,9 +357,18 @@ void ATEMbase::_createCommandHeader(const uint8_t headerCmd, const uint16_t leng
     }
 }
 void ATEMbase::_sendPacketBuffer(uint8_t length)	{
-	_Udp.beginPacket(_switcherIP,  9910);
+	char r;
+	Serial.printf("UDP to %X ",(uint64_t)_switcherIP);
+	r=_Udp.beginPacket(_switcherIP,  9910);
+	if (r==0)
+		Serial.print("udp begin fail");
+	else
+	{
 	_Udp.write(_packetBuffer,length);
+	Serial.print(">");
 	_Udp.endPacket(); 	// TODO: Figure out why this may hang!!
+	Serial.print(".");
+	}
 }
 
 /**

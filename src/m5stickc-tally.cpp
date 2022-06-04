@@ -56,14 +56,17 @@ void setup()
 		delay(500);
 	}
 	Serial.println("Connected to the WiFi network");
-
+	Serial.print("IP:");
+	Serial.println(WiFi.localIP());
+	
 
 	M5.Lcd.printf(" done\n");
 
 	M5.Lcd.printf("Connecting to ATEM\n<%d.%d.%d.%d>: ", SWITCHER_IP[0], SWITCHER_IP[1], SWITCHER_IP[2], SWITCHER_IP[3]);
 
 	AtemSwitcher.begin(SWITCHER_IP);
-	AtemSwitcher.connect();
+	AtemSwitcher.serialOutput(1);
+	//AtemSwitcher.connect();
 
 	M5.Lcd.printf("done\n");
 
