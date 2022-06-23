@@ -8,8 +8,8 @@ const IPAddress SWITCHER_IP(192, 168, 1, 150);
 // --
 // WIFI
 
-#define SSID "AR750-))"
-#define PASS "RMgl1-2.4G"
+#define SSID "DrayTek"
+#define PASS "1009080706"
 
 // --
 // MISC
